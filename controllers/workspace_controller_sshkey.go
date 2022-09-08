@@ -38,6 +38,8 @@ func (r *WorkspaceReconciler) getSSHKeyID(ctx context.Context, instance *appv1al
 }
 
 func (r *WorkspaceReconciler) reconcileSSHKey(ctx context.Context, instance *appv1alpha2.Workspace, workspace *tfc.Workspace) (*tfc.Workspace, error) {
+	r.log.Info("Reconcile SSH key", "msg", "new reconciliation event")
+
 	if instance.Spec.SSHKey == nil {
 		// Verify whether a Workspace has an SSH key and unassign it if so
 		if workspace.SSHKey != nil {

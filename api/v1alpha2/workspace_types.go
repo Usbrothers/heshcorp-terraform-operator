@@ -50,7 +50,7 @@ type ValueFrom struct {
 
 // Variables let you customize configurations, modify Terraform's behavior, and store information like provider credentials.
 // More information:
-//  - https://www.terraform.io/cloud-docs/workspaces/variables
+//   - https://www.terraform.io/cloud-docs/workspaces/variables
 type Variable struct {
 	// Name of the variable.
 	Name string `json:"name"`
@@ -76,8 +76,8 @@ type Variable struct {
 // VersionControl settings for the workspace's VCS repository, enabling the UI/VCS-driven run workflow.
 // Omit this argument to utilize the CLI-driven and API-driven workflows, where runs are not driven by webhooks on your VCS provider.
 // More information:
-//  - https://www.terraform.io/cloud-docs/run/ui
-//  - https://www.terraform.io/cloud-docs/vcs
+//   - https://www.terraform.io/cloud-docs/run/ui
+//   - https://www.terraform.io/cloud-docs/vcs
 type VersionControl struct {
 	// The VCS Connection (OAuth Connection + Token) to use.
 	//+kubebuilder:validation:Pattern="^ot-[a-zA-Z0-9]+$"
@@ -91,7 +91,7 @@ type VersionControl struct {
 
 // SSH key used to clone Terraform modules
 // More information:
-//  - https://www.terraform.io/cloud-docs/workspaces/settings/ssh-keys
+//   - https://www.terraform.io/cloud-docs/workspaces/settings/ssh-keys
 type SSHKey struct {
 	//+kubebuilder:validation:Pattern="^sshkey-[a-zA-Z0-9]+$"
 	//+optional

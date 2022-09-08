@@ -100,7 +100,7 @@ func (r *WorkspaceReconciler) reconcileTags(ctx context.Context, instance *appv1
 
 	addTags := getTagsToAdd(instanceTags, workspaceTags)
 	if len(addTags) > 0 {
-		r.log.Info("Reconcile Tags", "msg", "adding tags from the workspace")
+		r.log.Info("Reconcile Tags", "msg", "adding tags to the workspace")
 		err := r.addWorkspaceTags(ctx, instance, addTags)
 		if err != nil {
 			return err
